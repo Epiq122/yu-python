@@ -1,4 +1,5 @@
-print(r'''
+print(
+    r'''
 *******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -19,6 +20,33 @@ ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
 ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
-''')
+'''
+)
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+print("You're at a cross road. Where do you want to go?\n")
+choice = input(f'Type "left" or "right" ')
+
+if choice == "left":
+    print("You've come to a lake. There is an island in the middle of the lake.\n")
+    choice = input(f'Type "wait" to wait for a boat. Type "swim" to swim across')
+    if choice == "wait":
+        print("You wait for a boat to come by\n")
+        print("You see three doors\n ")
+        choice = input(f'Type "red", "yellow","blue"')
+        if choice == "red":
+            print("You are burned alive")
+        elif choice == "blue":
+            print("You are eaten by a beast GAME OVER")
+        elif choice == "yellow":
+            print("You win")
+        else:
+            print("Game Over")
+    elif choice == "swim":
+        print("You get eaten by a shark")
+    else:
+        print("That is not a valid option")
+elif choice == "right":
+    print("You fall into a hole game over")
+else:
+    print("That's not a valid direction")
